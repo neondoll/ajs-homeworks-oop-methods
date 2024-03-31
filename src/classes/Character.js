@@ -3,7 +3,7 @@ import CharacterTypes from '../data/CharacterTypes';
 const characterTypes = Object.values(CharacterTypes);
 
 export default class Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name, type, health = 100, level = 1, attack = 0, defence = 0) {
     if (typeof name === 'string' && name.length >= 2 && name.length <= 10) {
       this.name = name; // имя
     } else {
